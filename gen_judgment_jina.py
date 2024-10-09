@@ -111,7 +111,7 @@ if __name__ == "__main__":
 
     print(f'judge model: {configs["judge_model"]}, baseline: {configs["baseline"]}, baseline model: {configs["baseline_model"]}, reference: {configs["reference"]}, '
           + f'reference models: {configs["ref_model"]}, temperature: {configs["temperature"]}, max tokens: {configs["max_tokens"]}, pairwise: {configs["pairwise"]}, '
-          + f"jina_device: {configs['jina_device']}")
+          + f"jina_device: {configs['jina_device']}, jina_model: {configs['jina_model']}")
 
     if configs["regex_pattern"]:
         pattern = re.compile(configs["regex_pattern"])
@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
     existing_judgments = load_model_answers(output_dir)
 
-    jina_judge = AutoModel.from_pretrained("kaleinaNyan/jina-v3-rullmarena-judge", trust_remote_code=True)
+    jina_judge = AutoModel.from_pretrained(configs["jina_model"], trust_remote_code=True)
     jina_judge.to(configs["jina_device"])
     jina_judge.eval()
 

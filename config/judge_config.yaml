@@ -62,5 +62,8 @@ model_list:
   - gpt-3.5-turbo-1106
   - glm-4-9b-chat
   - kolibri-mistral-0427-upd
+  - gemma-2-27b-it
+  - qwen-2.5-72b-it
 
-jina_device: "cuda:0"
+jina_model: "kaleinaNyan/jina-v3-rullmarena-judge-041024"
+jina_device: "cuda:3"
