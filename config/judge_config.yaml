@@ -66,4 +66,4 @@ model_list:
   - qwen-2.5-72b-it
 
 jina_model: "kaleinaNyan/jina-v3-rullmarena-judge-041024"
-jina_device: "cuda:3"
+jina_device: "cuda:0"
